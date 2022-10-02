@@ -106,3 +106,7 @@ LOAD
     "Region Code"
 FROM [lib://DataFiles/Customers.xlsx]
 (ooxml, embedded labels, table is Sheet1);
+///$tab _gitoqlok
+/**
+** Last Updated at 10/2/2022, 8:36:42 PM: dev2 changes [%_OBJECTS_%%_SCRIPT_%] (visu1219 at 10/2/2022, 8:33:54 PM)
+*/
