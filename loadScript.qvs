@@ -1,4 +1,4 @@
-///$tab Main _latest
+///$tab Main
 SET ThousandSep=',';
 SET DecimalSep='.';
 SET MoneyThousandSep=',';
@@ -17,6 +17,7 @@ SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
 SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December';
 SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
 SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday';
+
 ///$tab Sales
 // LESSON: Selecting and loading data
 // LESSON: Renaming fields
@@ -56,6 +57,13 @@ FROM [lib://DataFiles/Sales.xlsx]
 //     "Customer Number" as "Customer"
 // Resident Table1
 // Where ("Sales Qty" > $(quantity_threshold));
+
+
+
+
+
+
+
 ///$tab Dates
 // LESSON: Selecting and loading data
 // Loading data from Dates.xlsx
@@ -90,6 +98,17 @@ FROM [lib://DataFiles/Dates.xlsx]
 //     "Year"
 // FROM [lib://MyDataFiles/Dates.xlsx]
 // (ooxml, embedded labels, table is Dates);
+
+
+
+
+
+
+
+
+
+
+
 ///$tab Region
 //LESSON: Circular references
 LOAD
@@ -97,6 +116,10 @@ LOAD
     "Region Code"
 FROM [lib://DataFiles/Region.txt]
 (txt, codepage is 28591, embedded labels, delimiter is '\t', msq);
+
+
+
+
 ///$tab Customers
 // LESSON: Synthetic keys 
 LOAD
@@ -106,7 +129,4 @@ LOAD
     "Region Code"
 FROM [lib://DataFiles/Customers.xlsx]
 (ooxml, embedded labels, table is Sheet1);
-///$tab _gitoqlok
-/**
-** Last Updated at 10/2/2022, 8:36:42 PM: dev2 changes [%_OBJECTS_%%_SCRIPT_%] (visu1219 at 10/2/2022, 8:33:54 PM)
-*/
+

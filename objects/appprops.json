@@ -2,7 +2,7 @@
   {
     "qProperty": {
       "qInfo": {
-        "qId": "70a6dfdc-f2b5-49cf-8f57-d1224a31634a",
+        "qId": "5beb2f82-9617-4d88-a70e-1dbd6bbe4675",
         "qType": "appprops"
       },
       "qMetaDef": {},
@@ -14,8 +14,7 @@
       },
       "sheetLogoPosition": "",
       "rtl": false,
-      "theme": "horizon",
-      "disableCellNavMenu": false
+      "theme": "card"
     },
     "qChildren": []
   }

@@ -1,4 +1,4 @@
-///$tab Main _latest
+///$tab Main
 SET ThousandSep=',';
 SET DecimalSep='.';
 SET MoneyThousandSep=',';
