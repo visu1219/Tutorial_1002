@@ -1,0 +1,9 @@
+///$tab Customers
+// LESSON: Synthetic keys 
+LOAD
+    Customer,
+    "Customer Number",
+    "Line of Business",
+    "Region Code"
+FROM [lib://DataFiles/Customers.xlsx]
+(ooxml, embedded labels, table is Sheet1);

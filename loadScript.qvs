@@ -1,0 +1,132 @@
+///$tab Main
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$ ###0.00;-$ ###0.00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='M/D/YYYY';
+SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='en-US';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
+SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December';
+SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
+SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday';
+
+///$tab Sales
+// LESSON: Selecting and loading data
+// LESSON: Renaming fields
+Table1:
+LOAD
+    BackOrder,
+    Cost,
+    "Customer Number",
+    Date#(`Date`,'MM/DD/YYYY') as "Date",
+    GrossSales AS "Gross Sales",
+    "Invoice Date" AS "Bill Date",
+    "Invoice Number",
+    "Item Desc" AS "Item Description",
+    "Item Number",
+    Margin,
+    "Open Qty",
+    OpenOrder,
+    "Order Number",
+    "Promised Delivery Date",
+    Sales,
+    "Sales Qty",
+    "Sales Rep Number",
+    SalesKey
+FROM [lib://DataFiles/Sales.xlsx]
+(ooxml, embedded labels, table is [Sales data]);
+
+// LESSON: Reducing data 
+// Where Sales > 100.00 and Date("Invoice Date") >= '01/01/2013';
+
+// LESSON: Transforming data
+// SET quantity_threshold = 12000;
+
+// Sales_Buckets:
+//     LOAD
+//     "Sales Qty" as "High_Quantity",
+//     "Item Description" as "Item",
+//     "Customer Number" as "Customer"
+// Resident Table1
+// Where ("Sales Qty" > $(quantity_threshold));
+
+
+
+
+
+
+
+///$tab Dates
+// LESSON: Selecting and loading data
+// Loading data from Dates.xlsx
+Table2:
+LOAD
+    "Date",
+    Month (Date) as "Month",
+    Quarter,
+    "Week",
+    "Year"
+FROM [lib://DataFiles/Dates.xlsx]
+(ooxml, embedded labels, table is Dates);
+
+
+// LESSON: Concatenation
+// Table2a:
+// NoConcatenate LOAD
+//     "Date" as "Date2",
+//     Month (Date) as "Month2",
+//     Quarter as "Quarter2",
+//    "Week" as "Week2",
+//    "Year" as "Year2"
+// FROM [lib://MyDataFiles/Dates.xlsx]
+// (ooxml, embedded labels, table is Dates);
+
+// Table2a:
+// Concatenate LOAD
+//     "Date",
+//     Month (Date) as "Month",
+//     Quarter,
+//     // "Week",
+//     "Year"
+// FROM [lib://MyDataFiles/Dates.xlsx]
+// (ooxml, embedded labels, table is Dates);
+
+
+
+
+
+
+
+
+
+
+
+///$tab Region
+//LESSON: Circular references
+LOAD
+    Region,
+    "Region Code"
+FROM [lib://DataFiles/Region.txt]
+(txt, codepage is 28591, embedded labels, delimiter is '\t', msq);
+
+
+
+
+///$tab Customers
+// LESSON: Synthetic keys 
+LOAD
+    Customer,
+    "Customer Number",
+    "Line of Business",
+    "Region Code"
+FROM [lib://DataFiles/Customers.xlsx]
+(ooxml, embedded labels, table is Sheet1);
+

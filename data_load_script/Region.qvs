@@ -1,0 +1,7 @@
+///$tab Region
+//LESSON: Circular references
+LOAD
+    Region,
+    "Region Code"
+FROM [lib://DataFiles/Region.txt]
+(txt, codepage is 28591, embedded labels, delimiter is '\t', msq);

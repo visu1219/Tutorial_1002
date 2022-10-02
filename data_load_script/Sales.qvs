@@ -1,0 +1,39 @@
+///$tab Sales
+// LESSON: Selecting and loading data
+// LESSON: Renaming fields
+Table1:
+LOAD
+    BackOrder,
+    Cost,
+    "Customer Number",
+    Date#(`Date`,'MM/DD/YYYY') as "Date",
+    GrossSales AS "Gross Sales",
+    "Invoice Date" AS "Bill Date",
+    "Invoice Number",
+    "Item Desc" AS "Item Description",
+    "Item Number",
+    Margin,
+    "Open Qty",
+    OpenOrder,
+    "Order Number",
+    "Promised Delivery Date",
+    Sales,
+    "Sales Qty",
+    "Sales Rep Number",
+    SalesKey
+FROM [lib://DataFiles/Sales.xlsx]
+(ooxml, embedded labels, table is [Sales data]);
+
+// LESSON: Reducing data 
+// Where Sales > 100.00 and Date("Invoice Date") >= '01/01/2013';
+
+// LESSON: Transforming data
+// SET quantity_threshold = 12000;
+
+// Sales_Buckets:
+//     LOAD
+//     "Sales Qty" as "High_Quantity",
+//     "Item Description" as "Item",
+//     "Customer Number" as "Customer"
+// Resident Table1
+// Where ("Sales Qty" > $(quantity_threshold));

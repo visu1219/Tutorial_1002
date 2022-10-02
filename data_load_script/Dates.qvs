@@ -1,0 +1,34 @@
+///$tab Dates
+// LESSON: Selecting and loading data
+// Loading data from Dates.xlsx
+Table2:
+LOAD
+    "Date",
+    Month (Date) as "Month",
+    Quarter,
+    "Week",
+    "Year"
+FROM [lib://DataFiles/Dates.xlsx]
+(ooxml, embedded labels, table is Dates);
+
+
+// LESSON: Concatenation
+// Table2a:
+// NoConcatenate LOAD
+//     "Date" as "Date2",
+//     Month (Date) as "Month2",
+//     Quarter as "Quarter2",
+//    "Week" as "Week2",
+//    "Year" as "Year2"
+// FROM [lib://MyDataFiles/Dates.xlsx]
+// (ooxml, embedded labels, table is Dates);
+
+// Table2a:
+// Concatenate LOAD
+//     "Date",
+//     Month (Date) as "Month",
+//     Quarter,
+//     // "Week",
+//     "Year"
+// FROM [lib://MyDataFiles/Dates.xlsx]
+// (ooxml, embedded labels, table is Dates);

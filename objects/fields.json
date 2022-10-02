@@ -1,0 +1,264 @@
+[
+  {
+    "qName": "BackOrder",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Bill Date",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Cost",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Customer",
+    "qTags": [
+      "$text"
+    ],
+    "qSrcTables": [
+      "Sheet1"
+    ]
+  },
+  {
+    "qName": "Customer Number",
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Table1",
+      "Sheet1"
+    ]
+  },
+  {
+    "qName": "Date",
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer",
+      "$timestamp",
+      "$date"
+    ],
+    "qSrcTables": [
+      "Table1",
+      "Table2"
+    ]
+  },
+  {
+    "qName": "Gross Sales",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Invoice Number",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Item Description",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Item Number",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Line of Business",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Sheet1"
+    ]
+  },
+  {
+    "qName": "Margin",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Month",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Table2"
+    ]
+  },
+  {
+    "qName": "Open Qty",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "OpenOrder",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Order Number",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Promised Delivery Date",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Quarter",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Table2"
+    ]
+  },
+  {
+    "qName": "Region",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Region"
+    ]
+  },
+  {
+    "qName": "Region Code",
+    "qTags": [
+      "$key",
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Region",
+      "Sheet1"
+    ]
+  },
+  {
+    "qName": "Sales",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Sales Qty",
+    "qTags": [
+      "$numeric"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Sales Rep Number",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "SalesKey",
+    "qTags": [
+      "$ascii",
+      "$text"
+    ],
+    "qSrcTables": [
+      "Table1"
+    ]
+  },
+  {
+    "qName": "Week",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Table2"
+    ]
+  },
+  {
+    "qName": "Year",
+    "qTags": [
+      "$numeric",
+      "$integer"
+    ],
+    "qSrcTables": [
+      "Table2"
+    ]
+  }
+]

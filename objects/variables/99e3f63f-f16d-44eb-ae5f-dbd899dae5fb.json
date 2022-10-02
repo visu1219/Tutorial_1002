@@ -1,0 +1,14 @@
+{
+  "qInfo": {
+    "qId": "99e3f63f-f16d-44eb-ae5f-dbd899dae5fb",
+    "qType": "variable"
+  },
+  "qMetaDef": {},
+  "qName": "quantity_threshold",
+  "qNumberPresentation": {
+    "qType": "U",
+    "qnDec": 10,
+    "qUseThou": 0
+  },
+  "qDefinition": "12000"
+}
